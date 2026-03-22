@@ -2190,9 +2190,7 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
             <polyline points="5 12 12 5 19 12"></polyline>
         </svg>
     </button>
-    <!-- ================= PROJECTS SECTION ================= -->
-
-   <section id="projects" class="flex flex-col items-center justify-center py-16 bg-gray-900 text-white">
+  <section id="projects" class="flex flex-col items-center justify-center py-16 bg-gray-900 text-white">
 
     <!-- TITLE -->
     <div class="w-full text-center mb-10">
@@ -2205,33 +2203,30 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     <!-- CAROUSEL -->
     <div class="relative w-full max-w-6xl">
 
-        <!-- LEFT BUTTON -->
-       
-
         <!-- WRAPPER -->
         <div id="projectsCarousel"
-            class="flex gap-6 overflow-x-auto scroll-smooth px-10 py-5">
+            class="flex gap-6 overflow-x-auto scroll-smooth px-6 py-5">
 
-            <!-- CARD -->
-            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
-                <img src="hotel.png" class="rounded-xl mb-4">
-                <h3 class="text-xl font-bold mb-2">platforme de réservation </h3>
-                <p class="text-gray-400 mb-4">Système de réservation avec Laravel </p>
+            <!-- CARD 1 -->
+            <div class="min-w-[300px] max-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center shadow-lg hover:shadow-2xl transition duration-300">
+                <img src="hotel.png"
+                     class="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
+
+                <h3 class="text-xl font-bold mb-2">Plateforme de réservation</h3>
+                <p class="text-gray-400 mb-4">Système de réservation avec Laravel.</p>
 
                 <div class="flex flex-wrap justify-center gap-2 mb-4">
                     <span class="bg-gray-700 px-2 py-1 rounded">HTML</span>
                     <span class="bg-gray-700 px-2 py-1 rounded">CSS</span>
                     <span class="bg-gray-700 px-2 py-1 rounded">Laravel</span>
                 </div>
-
-                <div class="flex gap-3 justify-center">
-                 
-                </div>
             </div>
 
-            <!-- CARD -->
-            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
-                <img src="portfolio.png" class="rounded-xl mb-4">
+            <!-- CARD 2 -->
+            <div class="min-w-[300px] max-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center shadow-lg hover:shadow-2xl transition duration-300">
+                <img src="portfolio.png"
+                     class="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
+
                 <h3 class="text-xl font-bold mb-2">Portfolio</h3>
                 <p class="text-gray-400 mb-4">Portfolio moderne avec Tailwind et dark mode.</p>
 
@@ -2239,15 +2234,13 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                     <span class="bg-gray-700 px-2 py-1 rounded">HTML</span>
                     <span class="bg-gray-700 px-2 py-1 rounded">Tailwind</span>
                 </div>
-
-                <div class="flex gap-3 justify-center">
-                
-                </div>
             </div>
 
-            <!-- CARD -->
-            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
-                <img src="crm.png" class="rounded-xl mb-4">
+            <!-- CARD 3 -->
+            <div class="min-w-[300px] max-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center shadow-lg hover:shadow-2xl transition duration-300">
+                <img src="crm.png"
+                     class="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
+
                 <h3 class="text-xl font-bold mb-2">CRM RH</h3>
                 <p class="text-gray-400 mb-4">Gestion RH et facturation.</p>
 
@@ -2255,35 +2248,34 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                     <span class="bg-gray-700 px-2 py-1 rounded">API</span>
                     <span class="bg-gray-700 px-2 py-1 rounded">MySQL</span>
                 </div>
-
-                <div class="flex gap-3 justify-center">
-                
-                </div>
             </div>
 
-            <!-- CARD -->
-            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
-                <img src="syndic.png" class="rounded-xl mb-4">
+            <!-- CARD 4 -->
+            <div class="min-w-[300px] max-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center shadow-lg hover:shadow-2xl transition duration-300">
+                <img src="syndic.png"
+                     class="w-full h-40 object-cover rounded-xl mb-4 transition-transform duration-300 hover:scale-105">
+
                 <h3 class="text-xl font-bold mb-2">Syndic</h3>
-                <p class="text-gray-400 mb-4">plateforme de gestion pour les syndics.</p>
+                <p class="text-gray-400 mb-4">Plateforme de gestion pour les syndics.</p>
 
                 <div class="flex flex-wrap justify-center gap-2 mb-4">
                     <span class="bg-gray-700 px-2 py-1 rounded">React</span>
                     <span class="bg-gray-700 px-2 py-1 rounded">Laravel</span>
                 </div>
-
-                <div class="flex gap-3 justify-center">
-                    
-                </div>
             </div>
 
         </div>
 
-        <!-- RIGHT BUTTON -->
-       
     </div>
 
 </section>
+
+<!-- HIDE SCROLLBAR -->
+<style>
+#projectsCarousel::-webkit-scrollbar {
+    display: none;
+}
+</style>
 
 <!-- SCRIPT -->
 <script>
