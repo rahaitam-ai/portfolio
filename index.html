@@ -2192,177 +2192,128 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     </button>
     <!-- ================= PROJECTS SECTION ================= -->
 
-    <section id="projects" class="flex flex-col items-center justify-center dark:bg-red-900 py-16">
-        <div class="w-full">
-            <h1 id="title6" class="text-4xl font-bold text-center"></h1>
-            <p id="parageaph6" class="max-w-4xl mx-auto text-center text-lg mt-10 px-4 pb-5"></p>
-        </div>
+   <section id="projects" class="flex flex-col items-center justify-center py-16 bg-gray-900 text-white">
 
-        <div class="carousel-container w-full">
-            <!-- Left Arrow -->
-            <button class="carousel-arrow left" aria-label="Previous project" onclick="scrollCarousel('left')">
-                <i class="fas fa-chevron-left"></i>
-            </button>
+    <!-- TITLE -->
+    <div class="w-full text-center mb-10">
+        <h1 class="text-4xl font-bold">Mes Projets</h1>
+        <p class="max-w-2xl mx-auto mt-4 text-gray-300">
+            Voici quelques projets que j'ai réalisés avec différentes technologies modernes.
+        </p>
+    </div>
 
-            <!-- Carousel Wrapper -->
-            <div class="carousel-wrapper" id="projectsCarousel" role="region" aria-label="Projects carousel">
+    <!-- CAROUSEL -->
+    <div class="relative w-full max-w-6xl">
 
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="hotel.png" alt="E-commerce Flower Shop" class="project-image">
-                    <h3 id="title7" class="project-title">Site web d'un mini Hotel</h3>
-                    <p id="parageaph7" class="project-description"></p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Laravel</span>
-                        <span class="tech-tag">MySQL</span>
-                    </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                
-                    </div>
+        <!-- LEFT BUTTON -->
+        <button onclick="scrollCarousel(-1)"
+            class="absolute left-0 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 p-3 rounded-full z-10">
+            ❮
+        </button>
+
+        <!-- WRAPPER -->
+        <div id="projectsCarousel"
+            class="flex gap-6 overflow-x-auto scroll-smooth px-10 py-5">
+
+            <!-- CARD -->
+            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
+                <img src="hotel.png" class="rounded-xl mb-4">
+                <h3 class="text-xl font-bold mb-2">Mini Hotel</h3>
+                <p class="text-gray-400 mb-4">Système de réservation avec Laravel et MySQL.</p>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-gray-700 px-2 py-1 rounded">HTML</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded">CSS</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded">Laravel</span>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <img src="portfolio.png" alt="Portfolio Website" class="project-image">
-                    <h3 id="title8" class="project-title">Modern Portfolio Website</h3>
-                    <p id="parageaph8" class="project-description"></p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Tailwind</span>
-                        <span class="tech-tag">FR / EN</span>
-                        <span class="tech-tag">Dark Mode</span>
-                    </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a  target="_blank" rel="noopener noreferre"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                          
-                        </a>
-
-                        <a  target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              bg-gradient-to-r from-red-600 to-red-700
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-              border-2 border-red-600 hover:border-red-700
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                        </a>
-                    </div>
+                <div class="flex gap-3 justify-center">
+                    <a href="#" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Voir</a>
+                    <a href="#" class="border border-red-600 px-4 py-2 rounded hover:bg-red-600">Code</a>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="crm.png" alt="Vue.js Application" class="project-image">
-                    <h3 id="title9" class="project-title">Crm Rh</h3>
-                    <p id="parageaph9" class="project-description"></p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Html</span>
-                        <span class="tech-tag"> CSS</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">API</span>
-                    </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a  target="" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-             
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                        </a>
-
-                        <a target="" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-             
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                          
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <img src="syndic.png" alt="Goal Tracker App" class="project-image">
-                    <h3 class="project-title">Syndic</h3>
-                    <p id="project4" class="project-description"></p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">laravel</span>
-                    </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a href="https://github.com/ImaneElla/GoalTracker" target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                           
-                        </a>
-
-                        <a href="" target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              bg-gradient-to-r from-red-600 to-red-700
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-              border-2 border-red-600 hover:border-red-700
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                               
-                        </a>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Right Arrow -->
-            <button class="carousel-arrow right" aria-label="Next project" onclick="scrollCarousel('right')">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            <!-- CARD -->
+            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
+                <img src="portfolio.png" class="rounded-xl mb-4">
+                <h3 class="text-xl font-bold mb-2">Portfolio</h3>
+                <p class="text-gray-400 mb-4">Portfolio moderne avec Tailwind et dark mode.</p>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-gray-700 px-2 py-1 rounded">HTML</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded">Tailwind</span>
+                </div>
+
+                <div class="flex gap-3 justify-center">
+                    <a href="#" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Voir</a>
+                    <a href="#" class="border border-red-600 px-4 py-2 rounded hover:bg-red-600">Code</a>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
+                <img src="crm.png" class="rounded-xl mb-4">
+                <h3 class="text-xl font-bold mb-2">CRM RH</h3>
+                <p class="text-gray-400 mb-4">Gestion RH avec API et base de données.</p>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-gray-700 px-2 py-1 rounded">API</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded">MySQL</span>
+                </div>
+
+                <div class="flex gap-3 justify-center">
+                    <a href="#" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Voir</a>
+                    <a href="#" class="border border-red-600 px-4 py-2 rounded hover:bg-red-600">Code</a>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="min-w-[300px] bg-gray-800 rounded-2xl p-5 flex-shrink-0 text-center">
+                <img src="syndic.png" class="rounded-xl mb-4">
+                <h3 class="text-xl font-bold mb-2">Syndic</h3>
+                <p class="text-gray-400 mb-4">Application de gestion immobilière.</p>
+
+                <div class="flex flex-wrap justify-center gap-2 mb-4">
+                    <span class="bg-gray-700 px-2 py-1 rounded">React</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded">Laravel</span>
+                </div>
+
+                <div class="flex gap-3 justify-center">
+                    <a href="#" class="bg-red-600 px-4 py-2 rounded hover:bg-red-700">Voir</a>
+                    <a href="#" class="border border-red-600 px-4 py-2 rounded hover:bg-red-600">Code</a>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Progress Dots -->
-        <div class="carousel-dots" id="carouselDots"></div>
-    </section>
+        <!-- RIGHT BUTTON -->
+        <button onclick="scrollCarousel(1)"
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 p-3 rounded-full">
+            ❯
+        </button>
+    </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+function scrollCarousel(direction) {
+    const container = document.getElementById('projectsCarousel');
+    const scrollAmount = 320;
+
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+<!-- STYLE SCROLL HIDE -->
+<style>
+#projectsCarousel::-webkit-scrollbar {
+    display: none;
+}
+</style>
     <!-- ================= CONTACT SECTION ================= -->
     <section id="contact" class="py-24 px-6 flex flex-col justify-center">
         <h1 id="title10" class="text-center text-4xl font-bold mb-12">
