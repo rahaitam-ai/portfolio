@@ -1513,7 +1513,7 @@
         </div>
         <div class="flex justify-center items-center transition-all duration-500 ease-out
                 hover:scale-110 hover:-translate-y-2">
-            <img src="nv nv image.png" alt="PROFILE" class="w-80 h-80 rounded-full shadow-md object-cover ">
+            <img src="profile.png" alt="PROFILE" class="w-80 h-80 rounded-full shadow-md object-cover ">
         </div>
     </section>
 
@@ -1523,7 +1523,24 @@
         <h1 id="title2" class="text-4xl font-bold text-center pt-20 mt-70 mb-10"> </h1>
         <p id="paragraph2" class="max-w-4xl mx-auto text-center mt-6 text-lg px-4 pb-10"></p>
 
-        <h1 id="title3" class="text-center text-4xl font-bold text-my-primary mb-12"></h1>
+        <h1 id="title3" class="text-center text-4xl font-bold text-my-primary mb-8"></h1>
+        <div class="flex flex-wrap justify-center gap-3 mb-8 px-4">
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Java</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Tailwind</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Flask</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">VS Code</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Spring Boot</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Android Studio</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">C#</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Adobe Illustrator</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">C++</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Visual Studio</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">TypeScript</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Vue.js</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">XAMPP</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">GitHub</span>
+            <span class="px-3 py-2 rounded-full bg-red-100 text-red-700 font-semibold text-sm shadow-sm">Git</span>
+        </div>
         <div class="flex flex-wrap justify-center gap-6 mt-8 dark:shadow-white-md" id="grid-skills">
 
 
@@ -2190,68 +2207,194 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
             <polyline points="5 12 12 5 19 12"></polyline>
         </svg>
     </button>
-  <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-    <div class="container mx-auto px-6">
-        <!-- TITLE -->
-        <div class="text-center mb-16">
-            <h1 id="title6" class="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
-                Mes Projets
-            </h1>
-            <p id="parageaph6" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-                Découvrez mes réalisations récentes et les technologies que j'utilise.
-            </p>
+    <!-- ================= PROJECTS SECTION ================= -->
+
+    <section id="projects" class="flex flex-col items-center justify-center dark:bg-red-900 py-16">
+        <div class="w-full">
+            <h1 id="title6" class="text-4xl font-bold text-center"></h1>
+            <p id="parageaph6" class="max-w-4xl mx-auto text-center text-lg mt-10 px-4 pb-5"></p>
         </div>
 
-        <!-- PROJECTS GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <!-- Project 1: Plateforme Syndic -->
-            <div class="project-card group bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-100 dark:border-gray-700">
-                <div class="relative overflow-hidden h-64">
-                    <img src="Capture d'écran 2026-04-17 194751.png" alt="Plateforme Syndic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <span class="text-white font-medium">Laravel & React</span>
+        <div class="carousel-container w-full">
+            <!-- Left Arrow -->
+            <button class="carousel-arrow left" aria-label="Previous project" onclick="scrollCarousel('left')">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- Carousel Wrapper -->
+            <div class="carousel-wrapper" id="projectsCarousel" role="region" aria-label="Projects carousel">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="hotel.png" alt="E-commerce Flower Shop" class="project-image">
+                    <h3 id="title7" class="project-title">Site web d'un mini Hotel</h3>
+                    <p id="parageaph7" class="project-description"></p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Laravel</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
+                        <a href="" target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              
+              backdrop-blur-sm
+              text-white font-semibold text-sm
+              rounded-xl
+              
+              hover:bg-red-600 hover:border-red-600
+              dark:hover:bg-red-600 dark:hover:border-red-500
+              hover:shadow-xl hover:shadow-red-500/30
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                            <i
+                                class="fa-brands fa-github text-xl group-hover:rotate-12 transition-transform duration-300"></i>
+                            
+                        </a>
                     </div>
                 </div>
-                <div class="p-8">
-                    <h3 id="title7" class="text-2xl font-bold mb-4 text-gray-800 dark:text-white group-hover:text-red-600 transition-colors">Plateforme de gestion de syndic</h3>
-                    <p id="parageaph7" class="text-gray-600 dark:text-gray-400 mb-8 line-clamp-3 leading-relaxed">
-                        Application web permettant la gestion complète des copropriétés : gestion des résidents, suivi des paiements, gestion des réclamations et communication entre syndic et habitants. Interface simple, rapide et responsive.
-                    </p>
-                    <a href="https://github.com/rahaitam-ai/syndic-version-finale" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 hover:shadow-red-600/40 transform hover:scale-105">
-                        <i class="fab fa-github mr-2"></i> Voir sur GitHub
-                    </a>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="portfolio.png" alt="Portfolio Website" class="project-image">
+                    <h3 id="title8" class="project-title">Modern Portfolio Website</h3>
+                    <p id="parageaph8" class="project-description"></p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">FR / EN</span>
+                        <span class="tech-tag">Dark Mode</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
+                        <a  target="_blank" rel="noopener noreferre"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              
+              backdrop-blur-sm
+              text-white font-semibold text-sm
+              rounded-xl
+              hover:bg-red-600 hover:border-red-600
+              dark:hover:bg-red-600 dark:hover:border-red-500
+              hover:shadow-xl hover:shadow-red-500/30
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                          
+                        </a>
+
+                        <a  target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              bg-gradient-to-r from-red-600 to-red-700
+              hover:from-red-700 hover:to-red-800
+              text-white font-semibold text-sm
+              rounded-xl
+              border-2 border-red-600 hover:border-red-700
+              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                            
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="crm.png" alt="Vue.js Application" class="project-image">
+                    <h3 id="title9" class="project-title">Crm Rh</h3>
+                    <p id="parageaph9" class="project-description"></p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Html</span>
+                        <span class="tech-tag"> CSS</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
+                        <a  target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              
+              backdrop-blur-sm
+              text-white font-semibold text-sm
+              rounded-xl
+             
+              hover:bg-red-600 hover:border-red-600
+              dark:hover:bg-red-600 dark:hover:border-red-500
+              hover:shadow-xl hover:shadow-red-500/30
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                            
+                        </a>
+
+                        <a target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              
+              hover:from-red-700 hover:to-red-800
+              text-white font-semibold text-sm
+              rounded-xl
+             
+              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                          
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="syndic.png" alt="Goal Tracker App" class="project-image">
+                    <h3 class="project-title">Syndic</h3>
+                    <p id="project4" class="project-description"></p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">laravel</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
+                        <a href="https://github.com/ImaneElla/GoalTracker" target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              
+              backdrop-blur-sm
+              text-white font-semibold text-sm
+              rounded-xl
+              hover:bg-red-600 hover:border-red-600
+              dark:hover:bg-red-600 dark:hover:border-red-500
+              hover:shadow-xl hover:shadow-red-500/30
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                           
+                        </a>
+
+                        <a href="https://goal-tracker-by-imane.vercel.app/" target="_blank" rel="noopener noreferrer"
+                            class="group inline-flex items-center gap-2.5 px-6 py-3
+              bg-gradient-to-r from-red-600 to-red-700
+              hover:from-red-700 hover:to-red-800
+              text-white font-semibold text-sm
+              rounded-xl
+              border-2 border-red-600 hover:border-red-700
+              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
+              transform hover:-translate-y-1 hover:scale-105
+              transition-all duration-300 ease-out">
+                            
+                               
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Project 2: Plateforme de réservation -->
-            <div class="project-card group bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-100 dark:border-gray-700">
-                <div class="relative overflow-hidden h-64">
-                    <img src="Capture d'écran 2026-04-17 195927.png" alt="Plateforme de réservation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <span class="text-white font-medium">Web Development</span>
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 id="title8" class="text-2xl font-bold mb-4 text-gray-800 dark:text-white group-hover:text-red-600 transition-colors">Plateforme de réservation de terrain</h3>
-                    <p id="parageaph8" class="text-gray-600 dark:text-gray-400 mb-8 line-clamp-3 leading-relaxed">
-                        Application web dédiée à la réservation de terrains sportifs en ligne. Permet aux utilisateurs de consulter les disponibilités, réserver facilement et gérer leurs créneaux. Design moderne et expérience utilisateur fluide.
-                    </p>
-                    <a href="https://github.com/rahaitam-ai/platforme-reservation-de-terrain-" target="_blank" class="inline-flex items-center justify-center px-8 py-3 bg-red-600 text-white font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 hover:shadow-red-600/40 transform hover:scale-105">
-                        <i class="fab fa-github mr-2"></i> Voir sur GitHub
-                    </a>
-                </div>
-            </div>
+            <!-- Right Arrow -->
+            <button class="carousel-arrow right" aria-label="Next project" onclick="scrollCarousel('right')">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-    </div>
-</section>
 
-
-<!-- STYLE SCROLL HIDE -->
-<style>
-#projectsCarousel::-webkit-scrollbar {
-    display: none;
-}
-</style>
+        <!-- Progress Dots -->
+        <div class="carousel-dots" id="carouselDots"></div>
+    </section>
     <!-- ================= CONTACT SECTION ================= -->
     <section id="contact" class="py-24 px-6 flex flex-col justify-center">
         <h1 id="title10" class="text-center text-4xl font-bold mb-12">
@@ -2416,19 +2559,20 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     p6: "Fast learner, adaptable to new technologies, and flexible in evolving technical environments.",
     
     title5: "My Journey",
-    title6: "My Projects",
-    parageaph6: "Discover my recent achievements and the technologies I use.",
+    title6: "Projects",
     
-    title7: "Syndic Management Platform",
-    parageaph7: "A comprehensive web application for condominium management: resident management, payment tracking, complaint handling, and communication. Simple, fast, and responsive interface.",
+    parageaph6: "Here are some projects I have worked on. They reflect my learning process, technical skills, and growth in web development.",
     
-    title8: "Sports Court Reservation Platform",
-    parageaph8: "A dedicated web application for online sports court reservations. Allows users to check availability, book easily, and manage slots. Modern design and fluid user experience.",
+    title7: "Web Management Application",
+    parageaph7: "A web application with secure user authentication, data management features, and a dynamic admin dashboard.",
     
-    title9: "",
-    parageaph9: "",
+    title8: "Personal Portfolio",
+    parageaph8: "A personal portfolio website showcasing my projects, technical skills, and experience.",
     
-    projetBtn: "View on GitHub",
+    title9: "Interactive Web Platform",
+    parageaph9: "An interactive platform featuring user interaction, dynamic content, and database integration.",
+    
+    projetBtn: "View Project",
     
     title10: "Get in Touch",
     parageaph10: "I’m always open to discussing new projects, creative ideas, or professional opportunities. Feel free to reach out!",
@@ -2469,19 +2613,20 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     p6: "Apprentissage rapide des nouvelles technologies et capacité à s’adapter aux évolutions techniques.",
     
     title5: "Mon Parcours",
-    title6: "Mes Projets",
-    parageaph6: "Découvrez mes réalisations récentes et les technologies que j'utilise.",
+    title6: "Projets",
     
-    title7: "Plateforme de gestion de syndic",
-    parageaph7: "Application web permettant la gestion complète des copropriétés : gestion des résidents, suivi des paiements, gestion des réclamations et communication entre syndic et habitants. Interface simple, rapide et responsive.",
+    parageaph6: "Voici quelques projets sur lesquels j’ai travaillé. Ils reflètent mon apprentissage, mes compétences techniques et mon évolution en développement web.",
     
-    title8: "Plateforme de réservation de terrain",
-    parageaph8: "Application web dédiée à la réservation de terrains sportifs en ligne. Permet aux utilisateurs de consulter les disponibilités, réserver facilement et gérer leurs créneaux. Design moderne et expérience utilisateur fluide.",
+    title7: "Application de Gestion",
+    parageaph7: "Une application web permettant la gestion des utilisateurs, des données et des opérations avec authentification sécurisée et interface dynamique.",
     
-    title9: "",
-    parageaph9: "",
+    title8: "Portfolio Personnel",
+    parageaph8: "Un site portfolio présentant mon profil, mes compétences, mes projets et mes expériences professionnelles.",
     
-    projetBtn: "Voir sur GitHub",
+    title9: "Plateforme Web Interactive",
+    parageaph9: "Une plateforme permettant l’interaction des utilisateurs avec des fonctionnalités dynamiques et une base de données.",
+    
+    projetBtn: "Voir le Projet",
     
     title10: "Contact",
     parageaph10: "Intéressé par une collaboration, un projet ou une opportunité professionnelle ? N’hésitez pas à me contacter.",
@@ -2671,7 +2816,193 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                 moon.classList.remove("hidden");
             }
         };
+        /* ================= CAROUSEL JAVASCRIPT ================= */
+        // Enhanced Carousel Controller
+        class CarouselController {
+            constructor(carouselId) {
+                this.carousel = document.getElementById(carouselId);
+                this.cards = this.carousel.querySelectorAll('.project-card');
+                this.dotsContainer = document.getElementById('carouselDots');
+                this.leftArrow = document.querySelector('.carousel-arrow.left');
+                this.rightArrow = document.querySelector('.carousel-arrow.right');
+                this.currentIndex = 0;
+                this.isScrolling = false;
 
+                this.init();
+            }
+
+            init() {
+                this.createDots();
+                this.updateArrows();
+                this.addEventListeners();
+                this.updateActiveDot();
+            }
+
+            createDots() {
+                this.cards.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    dot.setAttribute('role', 'button');
+                    dot.setAttribute('aria-label', `Go to project ${index + 1}`);
+                    dot.addEventListener('click', () => this.scrollToIndex(index));
+                    this.dotsContainer.appendChild(dot);
+                });
+            }
+
+            scrollToIndex(index) {
+                if (this.isScrolling || index < 0 || index >= this.cards.length) return;
+
+                this.isScrolling = true;
+                this.currentIndex = index;
+
+                const card = this.cards[index];
+                const cardWidth = card.offsetWidth;
+                const gap = 32;
+                const scrollPosition = index * (cardWidth + gap);
+
+                this.carousel.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+
+                this.updateActiveDot();
+                this.updateArrows();
+
+                setTimeout(() => {
+                    this.isScrolling = false;
+                }, 500);
+            }
+
+            scrollCarousel(direction) {
+                if (direction === 'left' && this.currentIndex > 0) {
+                    this.scrollToIndex(this.currentIndex - 1);
+                } else if (direction === 'right' && this.currentIndex < this.cards.length - 1) {
+                    this.scrollToIndex(this.currentIndex + 1);
+                }
+            }
+
+            updateArrows() {
+                this.leftArrow.disabled = this.currentIndex === 0;
+                this.rightArrow.disabled = this.currentIndex === this.cards.length - 1;
+            }
+
+            updateActiveDot() {
+                const dots = this.dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+
+            addEventListeners() {
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        this.scrollCarousel('left');
+                    } else if (e.key === 'ArrowRight') {
+                        this.scrollCarousel('right');
+                    }
+                });
+
+
+                let startX = 0;
+                let scrollStart = 0;
+
+                this.carousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    scrollStart = this.carousel.scrollLeft;
+                });
+
+                this.carousel.addEventListener('touchmove', (e) => {
+                    if (!startX) return;
+                    const x = e.touches[0].clientX;
+                    const walk = (startX - x) * 1.5;
+                    this.carousel.scrollLeft = scrollStart + walk;
+                });
+
+                this.carousel.addEventListener('touchend', () => {
+                    startX = 0;
+                    this.snapToNearest();
+                });
+
+                // Mouse drag support
+                let isDown = false;
+                let startXMouse = 0;
+                let scrollLeftMouse = 0;
+
+                this.carousel.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    this.carousel.style.cursor = 'grabbing';
+                    startXMouse = e.pageX - this.carousel.offsetLeft;
+                    scrollLeftMouse = this.carousel.scrollLeft;
+                });
+
+                this.carousel.addEventListener('mouseleave', () => {
+                    if (isDown) {
+                        isDown = false;
+                        this.carousel.style.cursor = 'grab';
+                        this.snapToNearest();
+                    }
+                });
+
+                this.carousel.addEventListener('mouseup', () => {
+                    isDown = false;
+                    this.carousel.style.cursor = 'grab';
+                    this.snapToNearest();
+                });
+
+                this.carousel.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - this.carousel.offsetLeft;
+                    const walk = (x - startXMouse) * 1.5;
+                    this.carousel.scrollLeft = scrollLeftMouse - walk;
+                });
+
+                // Scroll observer for auto-updating active state
+                let scrollTimeout;
+                this.carousel.addEventListener('scroll', () => {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        if (!this.isScrolling) {
+                            this.detectCurrentIndex();
+                        }
+                    }, 150);
+                });
+            }
+
+            snapToNearest() {
+                const cardWidth = this.cards[0].offsetWidth;
+                const gap = 32;
+                const scrollPosition = this.carousel.scrollLeft;
+                const index = Math.round(scrollPosition / (cardWidth + gap));
+                this.scrollToIndex(index);
+            }
+
+            detectCurrentIndex() {
+                const cardWidth = this.cards[0].offsetWidth;
+                const gap = 32;
+                const scrollPosition = this.carousel.scrollLeft;
+                const newIndex = Math.round(scrollPosition / (cardWidth + gap));
+
+                if (newIndex !== this.currentIndex) {
+                    this.currentIndex = newIndex;
+                    this.updateActiveDot();
+                    this.updateArrows();
+                }
+            }
+        }
+
+        // Global scroll function for inline onclick
+        function scrollCarousel(direction) {
+            if (window.carouselInstance) {
+                window.carouselInstance.scrollCarousel(direction);
+            }
+        }
+
+        // Initialize carousel on page load
+        window.addEventListener('load', () => {
+            window.carouselInstance = new CarouselController('projectsCarousel');
+        });
         // Language Dropdown Toggle
         const languageBtn = document.getElementById('languageBtn');
         const languageDropdown = document.getElementById('languageDropdown');
@@ -2696,5 +3027,3 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
 </body>
 
 </html>
-
-
