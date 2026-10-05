@@ -920,32 +920,16 @@ CVHAITAMcom.pdf crossorigin="anonymous">
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px 100px;
+            padding: 20px 24px;
         }
 
-        /* Arrow visibility on hover */
-        @media (min-width: 769px) {
-            .carousel-container:hover .carousel-arrow {
-                opacity: 1;
-            }
-
-            .carousel-arrow {
-                opacity: 0.85;
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .carousel-arrow:disabled {
-                opacity: 0.3 !important;
-            }
-        }
-
-        /* Carousel Wrapper */
+        /* Projects Grid Layout */
         .carousel-wrapper {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 32px;
-            overflow-x: hidden;
-            overflow-y: visible;
-            scroll-behavior: smooth;
+            overflow: visible;
+            scroll-behavior: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
             padding: 20px 4px;
@@ -958,9 +942,8 @@ CVHAITAMcom.pdf crossorigin="anonymous">
 
         /* Project Card */
         .project-card {
-            min-width: 380px;
-            width: 380px;
-            flex-shrink: 0;
+            width: 100%;
+            min-width: 0;
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 0, 0, 0.08);
@@ -1223,18 +1206,16 @@ CVHAITAMcom.pdf crossorigin="anonymous">
         /* ===== CAROUSEL MOBILE RESPONSIVE ===== */
         @media (max-width: 768px) {
             .carousel-container {
-                padding: 20px 60px;
+                padding: 20px 16px;
             }
 
             .carousel-wrapper {
+                grid-template-columns: 1fr;
                 gap: 20px;
-                overflow-x: auto;
-                padding: 15px 4px;
+                padding: 15px 0;
             }
 
             .project-card {
-                min-width: 280px;
-                width: 280px;
                 padding: 18px;
             }
 
@@ -1249,34 +1230,6 @@ CVHAITAMcom.pdf crossorigin="anonymous">
             .project-description {
                 font-size: 0.875rem;
                 min-height: 40px;
-            }
-
-            .carousel-arrow {
-                width: 50px;
-                height: 50px;
-                font-size: 18px;
-            }
-
-            .carousel-arrow.left {
-                left: 5px;
-            }
-
-            .carousel-arrow.right {
-                right: 5px;
-            }
-
-            .carousel-dots {
-                margin-top: 30px;
-                gap: 10px;
-            }
-
-            .dot {
-                width: 8px;
-                height: 8px;
-            }
-
-            .dot.active {
-                width: 24px;
             }
 
             .tech-tag {
@@ -1294,7 +1247,7 @@ CVHAITAMcom.pdf crossorigin="anonymous">
         /* Small Mobile */
         @media (max-width: 480px) {
             .carousel-container {
-                padding: 15px 50px;
+                padding: 15px 12px;
             }
 
             .carousel-wrapper {
@@ -1302,27 +1255,11 @@ CVHAITAMcom.pdf crossorigin="anonymous">
             }
 
             .project-card {
-                min-width: 260px;
-                width: 260px;
                 padding: 16px;
             }
 
             .project-image {
                 height: 140px;
-            }
-
-            .carousel-arrow {
-                width: 45px;
-                height: 45px;
-                font-size: 16px;
-            }
-
-            .carousel-arrow.left {
-                left: 2px;
-            }
-
-            .carousel-arrow.right {
-                right: 2px;
             }
 
             .tech-stack {
@@ -1347,12 +1284,7 @@ CVHAITAMcom.pdf crossorigin="anonymous">
         /* Tablet */
         @media (min-width: 769px) and (max-width: 1024px) {
             .carousel-container {
-                padding: 20px 80px;
-            }
-
-            .project-card {
-                min-width: 340px;
-                width: 340px;
+                padding: 20px 18px;
             }
         }
 
@@ -1360,11 +1292,6 @@ CVHAITAMcom.pdf crossorigin="anonymous">
         @media (min-width: 1400px) {
             .carousel-container {
                 max-width: 1600px;
-            }
-
-            .project-card {
-                min-width: 420px;
-                width: 420px;
             }
         }
     </style>
@@ -2030,13 +1957,7 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
         </div>
 
         <div class="carousel-container w-full">
-            <!-- Left Arrow -->
-            <button class="carousel-arrow left" aria-label="Previous project" onclick="scrollCarousel('left')">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <!-- Carousel Wrapper -->
-            <div class="carousel-wrapper" id="projectsCarousel" role="region" aria-label="Projects carousel">
+            <div class="carousel-wrapper projects-grid" id="projectsCarousel" role="region" aria-label="Projects carousel">
 
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -2050,24 +1971,7 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                         <span class="tech-tag">Laravel</span>
                         <span class="tech-tag">MySQL</span>
                     </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a href="" target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-              
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            <i
-                                class="fa-brands fa-github text-xl group-hover:rotate-12 transition-transform duration-300"></i>
-                            
-                        </a>
-                    </div>
+
                 </div>
 
                 <!-- Project 2 -->
@@ -2083,34 +1987,7 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                         <span class="tech-tag">FR / EN</span>
                         <span class="tech-tag">Dark Mode</span>
                     </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a  target="_blank" rel="noopener noreferre"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                          
-                        </a>
 
-                        <a  target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              bg-gradient-to-r from-red-600 to-red-700
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-              border-2 border-red-600 hover:border-red-700
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Project 3 -->
@@ -2124,35 +2001,7 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                         <span class="tech-tag">MySQL</span>
                         <span class="tech-tag">API</span>
                     </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a  target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-             
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                        </a>
 
-                        <a target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-             
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                          
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Project 4 -->
@@ -2167,47 +2016,11 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">laravel</span>
                     </div>
-                    <div class="flex flex-wrap justify-center items-center gap-3 mt-6">
-                        <a href="https://github.com/ImaneElla/GoalTracker" target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              
-              backdrop-blur-sm
-              text-white font-semibold text-sm
-              rounded-xl
-              hover:bg-red-600 hover:border-red-600
-              dark:hover:bg-red-600 dark:hover:border-red-500
-              hover:shadow-xl hover:shadow-red-500/30
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                           
-                        </a>
 
-                        <a href="https://goal-tracker-by-imane.vercel.app/" target="_blank" rel="noopener noreferrer"
-                            class="group inline-flex items-center gap-2.5 px-6 py-3
-              bg-gradient-to-r from-red-600 to-red-700
-              hover:from-red-700 hover:to-red-800
-              text-white font-semibold text-sm
-              rounded-xl
-              border-2 border-red-600 hover:border-red-700
-              shadow-lg hover:shadow-2xl shadow-red-500/30 hover:shadow-red-500/60
-              transform hover:-translate-y-1 hover:scale-105
-              transition-all duration-300 ease-out">
-                            
-                               
-                        </a>
-                    </div>
                 </div>
 
             </div>
-
-            <!-- Right Arrow -->
-            <button class="carousel-arrow right" aria-label="Next project" onclick="scrollCarousel('right')">
-                <i class="fas fa-chevron-right"></i>
-            </button>
         </div>
-
-        <!-- Progress Dots -->
-        <div class="carousel-dots" id="carouselDots"></div>
     </section>
     <!-- ================= CONTACT SECTION ================= -->
     <section id="contact" class="py-24 px-6 flex flex-col justify-center">
@@ -2635,21 +2448,33 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
         class CarouselController {
             constructor(carouselId) {
                 this.carousel = document.getElementById(carouselId);
-                this.cards = this.carousel.querySelectorAll('.project-card');
+                this.cards = this.carousel ? this.carousel.querySelectorAll('.project-card') : [];
                 this.dotsContainer = document.getElementById('carouselDots');
                 this.leftArrow = document.querySelector('.carousel-arrow.left');
                 this.rightArrow = document.querySelector('.carousel-arrow.right');
                 this.currentIndex = 0;
                 this.isScrolling = false;
 
-                this.init();
+                if (this.carousel) {
+                    this.init();
+                }
             }
 
             init() {
-                this.createDots();
-                this.updateArrows();
+                if (!this.carousel) return;
+
+                if (this.dotsContainer && this.cards.length) {
+                    this.createDots();
+                }
+
+                if (this.leftArrow && this.rightArrow) {
+                    this.updateArrows();
+                }
+
                 this.addEventListeners();
-                this.updateActiveDot();
+                if (this.dotsContainer && this.cards.length) {
+                    this.updateActiveDot();
+                }
             }
 
             createDots() {
@@ -2696,11 +2521,13 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
             }
 
             updateArrows() {
+                if (!this.leftArrow || !this.rightArrow) return;
                 this.leftArrow.disabled = this.currentIndex === 0;
                 this.rightArrow.disabled = this.currentIndex === this.cards.length - 1;
             }
 
             updateActiveDot() {
+                if (!this.dotsContainer) return;
                 const dots = this.dotsContainer.querySelectorAll('.dot');
                 dots.forEach((dot, index) => {
                     dot.classList.toggle('active', index === this.currentIndex);
