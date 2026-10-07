@@ -1294,6 +1294,173 @@ CVHAITAMcom.pdf crossorigin="anonymous">
                 max-width: 1600px;
             }
         }
+
+        /* ===== PROFESSIONAL EXPERIENCE ===== */
+        #experience {
+            padding: 5rem 1.5rem;
+            scroll-margin-top: 80px;
+        }
+
+        #experience .experience-intro {
+            max-width: 800px;
+            margin: 1rem auto 3rem;
+            color: #6b7280;
+            line-height: 1.8;
+        }
+
+        #experience .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #experience .experience-card {
+            position: relative;
+            padding: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        #experience .experience-card::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #fca5a5);
+            content: "";
+        }
+
+        #experience .experience-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(220, 38, 38, 0.45);
+            box-shadow: 0 18px 38px rgba(127, 29, 29, 0.14);
+        }
+
+        #experience .experience-icon {
+            display: inline-flex;
+            width: 56px;
+            height: 56px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            border-radius: 16px;
+            background: rgba(220, 38, 38, 0.1);
+            color: #b91c1c;
+            font-size: 1.5rem;
+        }
+
+        #experience .experience-role {
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.4;
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            animation: none;
+        }
+
+        #experience .experience-company {
+            margin-bottom: 1.25rem;
+            color: #b91c1c;
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        #experience .experience-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        #experience .experience-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4b5563;
+            font-size: 0.93rem;
+            font-weight: 500;
+        }
+
+        #experience .experience-meta i {
+            color: #dc2626;
+        }
+
+        #experience .experience-description {
+            margin: 0;
+            color: #6b7280;
+            font-size: 0.97rem;
+            line-height: 1.8;
+        }
+
+        body.dark #experience .experience-intro,
+        body.dark #experience .experience-description {
+            color: #d1d5db;
+        }
+
+        body.dark #experience .experience-card {
+            border-color: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        body.dark #experience .experience-card:hover {
+            border-color: rgba(252, 165, 165, 0.6);
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark #experience .experience-icon {
+            background: rgba(220, 38, 38, 0.2);
+            color: #fca5a5;
+        }
+
+        body.dark #experience .experience-role {
+            color: #f9fafb;
+        }
+
+        body.dark #experience .experience-company,
+        body.dark #experience .experience-meta span {
+            color: #fca5a5;
+        }
+
+        @media (max-width: 768px) {
+            #experience {
+                padding: 3.5rem 1rem;
+            }
+
+            #experience .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            #experience .experience-card {
+                padding: 1.5rem;
+            }
+
+            #experience .experience-intro {
+                margin-bottom: 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #experience .experience-card {
+                transition: none;
+            }
+
+            #experience .experience-card:hover {
+                transform: none;
+            }
+        }
     </style>
 
 </head>
@@ -2022,6 +2189,53 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
             </div>
         </div>
     </section>
+    <!-- ================= PROFESSIONAL EXPERIENCE SECTION ================= -->
+    <section id="experience" class="flex flex-col items-center justify-center dark:bg-red-900">
+        <div class="w-full px-2">
+            <h1 id="experienceTitle" class="text-4xl font-bold text-center">Mes expériences professionnelles</h1>
+            <p id="experienceIntro" class="experience-intro text-center text-lg">
+                Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences
+                techniques et de travailler sur des projets web concrets.
+            </p>
+        </div>
+
+        <div class="experience-grid">
+            <article class="experience-card">
+                <div class="experience-icon" aria-hidden="true">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h2 id="experienceRole1" class="experience-role">Stagiaire Développeur Web</h2>
+                <p id="experienceCompany1" class="experience-company">Élégant ArtStudio</p>
+                <div class="experience-meta">
+                    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span id="experienceLocation1">Mohammedia</span></span>
+                    <span><i class="fa-regular fa-calendar-days" aria-hidden="true"></i><span id="experiencePeriod1">Novembre 2025 – Mars 2026</span></span>
+                </div>
+                <p id="experienceDescription1" class="experience-description">
+                    Participation au développement et à la maintenance de sites web professionnels. Conception
+                    d’interfaces modernes, intégration des fonctionnalités et optimisation des performances.
+                    Collaboration avec l’équipe design pour créer des solutions digitales adaptées aux besoins des clients.
+                </p>
+            </article>
+
+            <article class="experience-card">
+                <div class="experience-icon" aria-hidden="true">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h2 id="experienceRole2" class="experience-role">Stagiaire Développeur Web</h2>
+                <p id="experienceCompany2" class="experience-company">Al Barid Bank</p>
+                <div class="experience-meta">
+                    <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span id="experienceLocation2">Rabat</span></span>
+                    <span><i class="fa-regular fa-calendar-days" aria-hidden="true"></i><span id="experiencePeriod2">Avril 2026 – Mai 2026</span></span>
+                </div>
+                <p id="experienceDescription2" class="experience-description">
+                    Participation au développement d’une application web bancaire dédiée à la gestion des clients,
+                    des agences et des guichetiers. Conception d’interfaces modernes et sécurisées, intégration des
+                    fonctionnalités de gestion et optimisation des performances du système. Collaboration avec l’équipe
+                    technique pour développer des solutions adaptées aux besoins de la banque.
+                </p>
+            </article>
+        </div>
+    </section>
     <!-- ================= CONTACT SECTION ================= -->
     <section id="contact" class="py-24 px-6 flex flex-col justify-center">
         <h1 id="title10" class="text-center text-4xl font-bold mb-12">
@@ -2187,6 +2401,13 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     
     title5: "My Journey",
     title6: "Projects",
+    experienceTitle: "My Professional Experience",
+    experienceIntro: "Discover my professional journey and the experiences that have helped me develop my technical skills and work on real-world web projects.",
+    experienceRole: "Web Developer Intern",
+    experiencePeriod1: "November 2025 – March 2026",
+    experiencePeriod2: "April 2026 – May 2026",
+    experienceDescription1: "Contributed to the development and maintenance of professional websites. Designed modern interfaces, integrated features, and optimized performance. Collaborated with the design team to create digital solutions tailored to client needs.",
+    experienceDescription2: "Contributed to the development of a banking web application for managing customers, branches, and tellers. Designed modern, secure interfaces, integrated management features, and optimized system performance. Collaborated with the technical team to build solutions tailored to the bank’s needs.",
     
     parageaph6: "Here are some projects I have worked on. They reflect my learning process, technical skills, and growth in web development.",
     
@@ -2241,6 +2462,13 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
     
     title5: "Mon Parcours",
     title6: "Projets",
+    experienceTitle: "Mes expériences professionnelles",
+    experienceIntro: "Découvrez mon parcours professionnel et les expériences qui m’ont permis de développer mes compétences techniques et de travailler sur des projets web concrets.",
+    experienceRole: "Stagiaire Développeur Web",
+    experiencePeriod1: "Novembre 2025 – Mars 2026",
+    experiencePeriod2: "Avril 2026 – Mai 2026",
+    experienceDescription1: "Participation au développement et à la maintenance de sites web professionnels. Conception d’interfaces modernes, intégration des fonctionnalités et optimisation des performances. Collaboration avec l’équipe design pour créer des solutions digitales adaptées aux besoins des clients.",
+    experienceDescription2: "Participation au développement d’une application web bancaire dédiée à la gestion des clients, des agences et des guichetiers. Conception d’interfaces modernes et sécurisées, intégration des fonctionnalités de gestion et optimisation des performances du système. Collaboration avec l’équipe technique pour développer des solutions adaptées aux besoins de la banque.",
     
     parageaph6: "Voici quelques projets sur lesquels j’ai travaillé. Ils reflètent mon apprentissage, mes compétences techniques et mon évolution en développement web.",
     
@@ -2287,6 +2515,14 @@ hover:-translate-y-2 group cursor-pointer transform hover:-translate-y-2 hover:s
             document.getElementById("p6").innerText = lang[l].p6;
             document.getElementById("title5").innerText = lang[l].title5;
             document.getElementById("title6").innerText = lang[l].title6;
+            document.getElementById("experienceTitle").innerText = lang[l].experienceTitle;
+            document.getElementById("experienceIntro").innerText = lang[l].experienceIntro;
+            document.getElementById("experienceRole1").innerText = lang[l].experienceRole;
+            document.getElementById("experienceRole2").innerText = lang[l].experienceRole;
+            document.getElementById("experiencePeriod1").innerText = lang[l].experiencePeriod1;
+            document.getElementById("experiencePeriod2").innerText = lang[l].experiencePeriod2;
+            document.getElementById("experienceDescription1").innerText = lang[l].experienceDescription1;
+            document.getElementById("experienceDescription2").innerText = lang[l].experienceDescription2;
             document.getElementById("parageaph6").innerText = lang[l].parageaph6;
             document.getElementById("title7").innerText = lang[l].title7;
             document.getElementById("parageaph7").innerText = lang[l].parageaph7;
